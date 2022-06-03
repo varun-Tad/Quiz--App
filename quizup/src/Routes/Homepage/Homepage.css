@@ -1,0 +1,43 @@
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10rem;
+}
+
+.hero-image {
+  height: 60%;
+  width: 50%;
+}
+
+.hero-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.hero-text {
+  font-size: 3em;
+}
+
+.hero-text-container button {
+  background-color: #3700b3;
+  color: white;
+  padding: 1rem;
+  font-size: 20px;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 0 9px #999;
+}
+
+.hero-text-container button:active {
+  background-color: #6200ee;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.main-section {
+  background-color: #f5f7f6;
+}
