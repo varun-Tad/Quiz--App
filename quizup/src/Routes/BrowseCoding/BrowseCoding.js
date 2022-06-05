@@ -17,7 +17,7 @@ const BrowseCoding = () => {
               Take this quiz on React to find out how much you know or don't
               know.
             </h3>
-            <button className="play-btn">Play</button>
+            <button className="play-btn">Play →</button>
           </div>
         </div>
         <div className="js-quiz">
@@ -29,7 +29,7 @@ const BrowseCoding = () => {
               Take this quiz on JavaScript to find out how much you know or
               don't know.
             </h3>
-            <button className="play-btn">Play</button>
+            <button className="play-btn">Play →</button>
           </div>
         </div>
       </section>
