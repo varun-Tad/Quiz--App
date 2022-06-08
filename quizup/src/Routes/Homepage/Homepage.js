@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Navbar from "../Navigation/Navbar";
 import { ImBullhorn } from "react-icons/im";
-
+import { AiOutlineToTop } from "react-icons/ai";
 import img1 from "../../assets/hero-image.svg";
 import img2 from "../../assets/coding.jpeg";
 import img3 from "../../assets/music.jpeg";
@@ -18,20 +18,30 @@ const Homepage = () => {
   }, []);
 
   let navigate = useNavigate();
-
+  const rulesRef = useRef(null);
+  const topRef = useRef(null);
   const exploreBtnHandler = () => {
     navigate("/Browse");
   };
+
+  const rulesHandler = () => {
+    rulesRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const topHandler = () => {
+    topRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   //Need to work on scroll for rules
   return (
-    <div className="homePage">
+    <div className="homePage" ref={topRef}>
       <Navbar />
       <section className="hero-section">
         <div className="hero-text-container">
           <h1 className="hero-text">Go ahead! Take the quiz!</h1>
           <div className="hero-btns">
             <button onClick={exploreBtnHandler}>Explore</button>
-            <button>Rules</button>
+            <button onClick={rulesHandler}>Rules</button>
           </div>
         </div>
         <div className="hero-image">
@@ -111,10 +121,14 @@ const Homepage = () => {
             <p>Get 3 questions right and you WIN ! </p>
           </div>
           <div className="playBtn-quiz">
-            <button>Jump in !</button>
+            <button onClick={exploreBtnHandler}>Jump in !</button>
           </div>
         </div>
       </section>
+      <div ref={rulesRef}></div>
+      <div className="top-arrow">
+        <AiOutlineToTop onClick={topHandler} />
+      </div>
     </div>
   );
 };

@@ -158,3 +158,11 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+.top-arrow {
+  font-size: 1.8rem;
+  position: relative;
+  left: 1390px;
+  bottom: 50px;
+  cursor: pointer;
+}
