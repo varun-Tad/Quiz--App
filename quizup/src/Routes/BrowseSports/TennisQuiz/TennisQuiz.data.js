@@ -43,3 +43,5 @@ const TennisQuizData = [
     correctAnswer: "October",
   },
 ];
+
+export default TennisQuizData;
