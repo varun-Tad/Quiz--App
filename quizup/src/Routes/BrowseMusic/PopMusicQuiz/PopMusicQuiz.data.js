@@ -1,0 +1,55 @@
+const PopMusicQuizData = [
+  {
+    id: 1,
+    question:
+      "Which mathematical symbol is not the name of an Ed Sheeran album?",
+    optionOne: "Plus",
+    optionTwo: "Multiply",
+    optionThree: "Subtract",
+    correctAnswer: "Subtract",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 2,
+    question: "Complete the Mark Ronson song title: Uptown...",
+    optionOne: "Tunes",
+    optionTwo: "Funk",
+    optionThree: "Beat",
+    correctAnswer: "Funk",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 3,
+    question: "Which Taylor Swift album is Shake It Off on?",
+    optionOne: "Speak Now",
+    optionTwo: "Red",
+    optionThree: "1989",
+    correctAnswer: "1989",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 4,
+    question: "In which video does Michael Jackson play a zombie?",
+    optionOne: "Bad",
+    optionTwo: "Beat it",
+    optionThree: "Thriller",
+    correctAnswer: "Thriller",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 5,
+    question: "Which movie is Can't Stop the Feeling from?",
+    optionOne: "Trolls",
+    optionTwo: "Suicide Squad",
+    optionThree: "Pitch Perfect 2",
+    correctAnswer: "Trolls",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+];
+
+export default PopMusicQuizData;

@@ -6,16 +6,19 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 import { TennisProvider } from "./Contexts/TennisContext";
 import { BasketBallProvider } from "./Contexts/BasketBallContext";
+import { PopMusicProvider } from "./Contexts/PopMusicContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <BasketBallProvider>
-        <TennisProvider>
-          <App />
-        </TennisProvider>
-      </BasketBallProvider>
+      <PopMusicProvider>
+        <BasketBallProvider>
+          <TennisProvider>
+            <App />
+          </TennisProvider>
+        </BasketBallProvider>
+      </PopMusicProvider>
     </Router>
   </React.StrictMode>
 );
