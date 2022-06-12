@@ -7,6 +7,8 @@ const TennisQuizData = [
     optionTwo: "Rafael Nadal",
     optionThree: "Daniil Medvedev",
     correctAnswer: "Daniil Medvedev",
+    selectedAnswer: " ",
+    questionStatus: false,
   },
   {
     id: 2,
@@ -15,6 +17,8 @@ const TennisQuizData = [
     optionTwo: "Steffi Graf",
     optionThree: "Serena Williams",
     correctAnswer: "Emma Raducanu",
+    selectedAnswer: " ",
+    questionStatus: false,
   },
   {
     id: 3,
@@ -24,6 +28,8 @@ const TennisQuizData = [
     optionTwo: "Alexander Zverev",
     optionThree: "Daniil Medvedev",
     correctAnswer: "Alexander Zverev",
+    selectedAnswer: " ",
+    questionStatus: false,
   },
   {
     id: 4,
@@ -33,6 +39,8 @@ const TennisQuizData = [
     optionTwo: "Serena Williams",
     optionThree: "Belinda Bencic",
     correctAnswer: "Belinda Bencic",
+    selectedAnswer: " ",
+    questionStatus: false,
   },
   {
     id: 5,
@@ -41,6 +49,8 @@ const TennisQuizData = [
     optionTwo: "October",
     optionThree: "May",
     correctAnswer: "October",
+    selectedAnswer: " ",
+    questionStatus: false,
   },
 ];
 

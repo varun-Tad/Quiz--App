@@ -1,11 +1,13 @@
 import Navbar from "../../Navigation/Navbar";
 import { useState } from "react";
-import { useTennis } from "../../../Contexts/TennisContext";
-import "./TennisQuiz.css";
+
+import "./BasketBallQuiz.css";
 import { useNavigate } from "react-router-dom";
-const TennisQuiz = () => {
+import { useBasketBall } from "../../../Contexts/BasketBallContext";
+const BasketBallQuiz = () => {
   let navigate = useNavigate();
-  const { TennisData, setTennisData, score, setScore } = useTennis();
+  const { BasketBallData, setBasketBallData, score, setScore } =
+    useBasketBall();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
 
@@ -22,14 +24,14 @@ const TennisQuiz = () => {
       setScore(newScore);
     }
 
-    const newCurrentTennisData = TennisData.map((item) =>
+    const newCurrentBasketBallData = BasketBallData.map((item) =>
       item.id === ele.id
         ? { ...item, selectedAnswer: selectedAnswer, questionStatus: true }
         : item
     );
-    setTennisData(newCurrentTennisData);
+    setBasketBallData(newCurrentBasketBallData);
     const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < TennisData.length) {
+    if (nextQuestion < BasketBallData.length) {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
@@ -37,7 +39,7 @@ const TennisQuiz = () => {
   };
 
   return (
-    <div className="Tennis-quiz-container">
+    <div className="BasketBall-quiz-container">
       <Navbar />
 
       {showScore ? (
@@ -52,13 +54,13 @@ const TennisQuiz = () => {
             <p>
               Question:{" "}
               <span className="actual-score">{currentQuestion + 1}</span>/
-              {TennisData.length}
+              {BasketBallData.length}
             </p>
             <p style={{ color: score < 0 ? "red" : "green" }}>Score: {score}</p>
           </div>
           <div className="question-container">
             <div className="question-text">
-              {currentQuestion + 1}. {TennisData[currentQuestion].question}
+              {currentQuestion + 1}. {BasketBallData[currentQuestion].question}
             </div>
             <div>
               {
@@ -66,32 +68,32 @@ const TennisQuiz = () => {
                   <button
                     onClick={() =>
                       clickHandler(
-                        TennisData[currentQuestion],
-                        TennisData[currentQuestion].optionOne
+                        BasketBallData[currentQuestion],
+                        BasketBallData[currentQuestion].optionOne
                       )
                     }
                   >
-                    {TennisData[currentQuestion].optionOne}
+                    {BasketBallData[currentQuestion].optionOne}
                   </button>
                   <button
                     onClick={() =>
                       clickHandler(
-                        TennisData[currentQuestion],
-                        TennisData[currentQuestion].optionTwo
+                        BasketBallData[currentQuestion],
+                        BasketBallData[currentQuestion].optionTwo
                       )
                     }
                   >
-                    {TennisData[currentQuestion].optionTwo}
+                    {BasketBallData[currentQuestion].optionTwo}
                   </button>
                   <button
                     onClick={() =>
                       clickHandler(
-                        TennisData[currentQuestion],
-                        TennisData[currentQuestion].optionThree
+                        BasketBallData[currentQuestion],
+                        BasketBallData[currentQuestion].optionThree
                       )
                     }
                   >
-                    {TennisData[currentQuestion].optionThree}
+                    {BasketBallData[currentQuestion].optionThree}
                   </button>
                 </div>
               }
@@ -103,4 +105,4 @@ const TennisQuiz = () => {
   );
 };
 
-export default TennisQuiz;
+export default BasketBallQuiz;

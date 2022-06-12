@@ -4,8 +4,11 @@ import "./App.css";
 import BrowseCoding from "./Routes/BrowseCoding/BrowseCoding";
 import BrowseMusic from "./Routes/BrowseMusic/BrowseMusic";
 import BrowsePage from "./Routes/BrowsePage/BrowsePage";
+import BasketBallQuiz from "./Routes/BrowseSports/BasketballQuiz/BasketBallQuiz";
 import BrowseSports from "./Routes/BrowseSports/BrowseSports";
 import TennisQuiz from "./Routes/BrowseSports/TennisQuiz/TennisQuiz";
+
+import TennisQuizRes from "./Routes/BrowseSports/TennisQuiz/TennisQuizRes";
 import Homepage from "./Routes/Homepage/Homepage";
 
 function App() {
@@ -18,6 +21,8 @@ function App() {
         <Route path="/BrowseMusic" element={<BrowseMusic />} />
         <Route path="/BrowseSports" element={<BrowseSports />} />
         <Route path="/TennisQuiz" element={<TennisQuiz />} />
+        <Route path="/BasketBallQuiz" element={<BasketBallQuiz />} />
+        <Route path="/TennisQuizRes" element={<TennisQuizRes />} />
       </Routes>
     </div>
   );

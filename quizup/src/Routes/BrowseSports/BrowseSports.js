@@ -11,6 +11,10 @@ const BrowseSports = () => {
     navigate("/TennisQuiz");
   };
 
+  const BasketBallQuizNav = () => {
+    navigate("/BasketBallQuiz");
+  };
+
   return (
     <div>
       <Navbar />
@@ -35,7 +39,9 @@ const BrowseSports = () => {
               Time to put your Basketball Knowledge to the test ! Dribble your
               way in !
             </h3>
-            <button className="play-btn">Play →</button>
+            <button className="play-btn" onClick={BasketBallQuizNav}>
+              Play →
+            </button>
           </div>
         </div>
       </section>

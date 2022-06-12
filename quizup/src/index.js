@@ -4,12 +4,18 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
+import { TennisProvider } from "./Contexts/TennisContext";
+import { BasketBallProvider } from "./Contexts/BasketBallContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <BasketBallProvider>
+        <TennisProvider>
+          <App />
+        </TennisProvider>
+      </BasketBallProvider>
     </Router>
   </React.StrictMode>
 );
