@@ -19,14 +19,26 @@ const SignUp = () => {
           <div className="signUp-inputs">
             <input
               className="signUp-input-box"
+              type="tex"
+              placeholder="Enter name"
+              required
+            ></input>
+            <input
+              className="signUp-input-box"
               type="email"
-              placeholder="Enter email"
+              placeholder="Enter Email"
               required
             ></input>
             <input
               className="signUp-input-box"
               type="password"
               placeholder="Enter Password"
+              required
+            ></input>
+            <input
+              className="signUp-input-box"
+              type="password"
+              placeholder="Confirm Password"
               required
             ></input>
           </div>

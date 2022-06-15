@@ -1,3 +1,7 @@
+import {
+  signInWithGooglePopup,
+  createUserDocumentFromAuth,
+} from "../../utils/firebase/firebase.utils";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navigation/Navbar";
 import "./Login.css";
@@ -6,6 +10,11 @@ const Login = () => {
   let navigate = useNavigate();
   const signUpHandler = () => {
     navigate("/SignUp");
+  };
+
+  const logGoogleUser = async () => {
+    const { user } = await signInWithGooglePopup();
+    const userDocRef = await createUserDocumentFromAuth(user);
   };
 
   return (
@@ -41,7 +50,7 @@ const Login = () => {
             </p>
           </div>
           <p className="small-text">_____or sign in with_____</p>
-          <div className="google-sign-in-btn">
+          <div className="google-sign-in-btn" onClick={logGoogleUser}>
             {" "}
             <img
               src="https://img.icons8.com/color/24/000000/google-logo.png"
