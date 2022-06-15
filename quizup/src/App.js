@@ -11,6 +11,8 @@ import TennisQuiz from "./Routes/BrowseSports/TennisQuiz/TennisQuiz";
 
 import TennisQuizRes from "./Routes/BrowseSports/TennisQuiz/TennisQuizRes";
 import Homepage from "./Routes/Homepage/Homepage";
+import Login from "./Routes/Login/Login";
+import SignUp from "./Routes/SignUp/SignUp";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="/BasketBallQuiz" element={<BasketBallQuiz />} />
         <Route path="/TennisQuizRes" element={<TennisQuizRes />} />
         <Route path="/PopMusicQuiz" element={<PopMusicQuiz />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/SignUp" element={<SignUp />} />
       </Routes>
     </div>
   );

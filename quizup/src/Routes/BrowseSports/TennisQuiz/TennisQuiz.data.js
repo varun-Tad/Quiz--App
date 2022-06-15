@@ -9,6 +9,7 @@ const TennisQuizData = [
     correctAnswer: "Daniil Medvedev",
     selectedAnswer: " ",
     questionStatus: false,
+    backgroundColor: "#6200ee",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const TennisQuizData = [
     correctAnswer: "Emma Raducanu",
     selectedAnswer: " ",
     questionStatus: false,
+    backgroundColor: "#6200ee",
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ const TennisQuizData = [
     correctAnswer: "Alexander Zverev",
     selectedAnswer: " ",
     questionStatus: false,
+    backgroundColor: "#6200ee",
   },
   {
     id: 4,
@@ -41,6 +44,7 @@ const TennisQuizData = [
     correctAnswer: "Belinda Bencic",
     selectedAnswer: " ",
     questionStatus: false,
+    backgroundColor: "#6200ee",
   },
   {
     id: 5,
@@ -51,6 +55,7 @@ const TennisQuizData = [
     correctAnswer: "October",
     selectedAnswer: " ",
     questionStatus: false,
+    backgroundColor: "#6200ee",
   },
 ];
 

@@ -35,6 +35,10 @@
   margin-right: 2rem;
 }
 
+.navbar-right p {
+  cursor: pointer;
+}
+
 .user {
   margin-top: 20px;
 }

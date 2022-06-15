@@ -118,7 +118,7 @@ const Homepage = () => {
           </div>
           <div className="rule">
             <ImBullhorn />
-            <p>Get 3 questions right and you WIN ! </p>
+            <p>Get all questions right and you earn double the points ! </p>
           </div>
           <div className="playBtn-quiz">
             <button onClick={exploreBtnHandler}>Jump in !</button>

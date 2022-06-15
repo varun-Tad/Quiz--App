@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Bigelow+Rules&family=Caveat:wght@500&family=Comforter&family=David+Libre:wght@500&family=Lato:wght@300&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Nunito:wght@400;700;800&family=Open+Sans:wght@300&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@500;700;900&family=Shizuru&family=Smooch&family=Square+Peg&family=Varela+Round&display=swap");
+
+.results-container {
+  margin-top: 15rem;
+  padding-bottom: 5rem;
+}
+
+.result-heading {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 3rem;
+}
+
+.final-score {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.question-options {
+  margin-top: 2rem;
+  margin-left: 20rem;
+  padding: 2rem;
+  width: 50%;
+  min-width: 500px;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.question-text {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.option-btns {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  row-gap: 1rem;
+}
+
+.option-btns button {
+  cursor: pointer;
+  width: 40%;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  background-color: #6200ee;
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  border: none;
+}
+
+.result-heading {
+  text-align: center;
+}
+
+.selected-answer {
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+.points {
+  margin-left: 43rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+.red-points {
+  color: red;
+}
+
+.green-points {
+  color: green;
+}

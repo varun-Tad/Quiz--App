@@ -43,7 +43,7 @@ const TennisQuiz = () => {
       {showScore ? (
         <div className="results-section">
           <div>Your Score is {score}</div>
-          <div>Head over to results page</div>
+          <div>Head over to results page to find the correct answers</div>
           <button onClick={resultsHandler}>Results &#8594;</button>
         </div>
       ) : (
