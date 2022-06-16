@@ -1,0 +1,55 @@
+const BolMusicQuizData = [
+  {
+    id: 1,
+    question: 'Which movie is the song "Tum Se Hi" from?',
+    optionOne: "Tum Mile",
+    optionTwo: "Jab we met",
+    optionThree: "Aashiqui 2",
+    correctAnswer: "Jab we met",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 2,
+    question: "Any idea where 'Goriya Churana Mera Jiya' was first heard?",
+    optionOne: "Coolie",
+    optionTwo: "Hero No 1",
+    optionThree: "Coolie No 1",
+    correctAnswer: "Coolie No 1",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 3,
+    question:
+      'which motion picture is the bop "Yeh Jawaani Hai Deewani" originally from?',
+    optionOne: "Student of the Year 2",
+    optionTwo: "Jawani Deewani",
+    optionThree: "Yeh Jawaani Hai Deewani",
+    correctAnswer: "Jawani Deewani",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 4,
+    question: 'You have to know where "Dard-E-Disco" is from, right?',
+    optionOne: "Karz",
+    optionTwo: "Happy New Year",
+    optionThree: "Om Shanti Om",
+    correctAnswer: "Om Shanti Om",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 5,
+    question: 'where was the gorgeous song "Raabta" originally heard?',
+    optionOne: "Rabta",
+    optionTwo: "Kedarnath",
+    optionThree: "Agent Vinod",
+    correctAnswer: "Agent Vinod",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+];
+
+export default BolMusicQuizData;
