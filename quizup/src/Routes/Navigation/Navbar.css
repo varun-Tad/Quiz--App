@@ -39,6 +39,17 @@
   cursor: pointer;
 }
 
+.toLogin {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  margin-top: 1.3rem;
+}
+
+.toLogin:hover span {
+  text-decoration: underline;
+}
+
 .user {
   margin-top: 20px;
 }

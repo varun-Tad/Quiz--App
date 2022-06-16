@@ -7,18 +7,21 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { TennisProvider } from "./Contexts/TennisContext";
 import { BasketBallProvider } from "./Contexts/BasketBallContext";
 import { PopMusicProvider } from "./Contexts/PopMusicContext";
+import { UserProvider } from "./Contexts/user.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <PopMusicProvider>
-        <BasketBallProvider>
-          <TennisProvider>
-            <App />
-          </TennisProvider>
-        </BasketBallProvider>
-      </PopMusicProvider>
+      <UserProvider>
+        <PopMusicProvider>
+          <BasketBallProvider>
+            <TennisProvider>
+              <App />
+            </TennisProvider>
+          </BasketBallProvider>
+        </PopMusicProvider>
+      </UserProvider>
     </Router>
   </React.StrictMode>
 );

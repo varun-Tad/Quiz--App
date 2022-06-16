@@ -1,12 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { UserContext } from "../../Contexts/user.context";
+import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 import "./Navbar.css";
 
 const Navbar = () => {
-  let navigate = useNavigate();
-  const loginHandler = () => {
-    navigate("/Login");
-  };
+  const { currentUser } = useContext(UserContext);
 
   return (
     <div className="navbar-container">
@@ -14,7 +14,17 @@ const Navbar = () => {
         <h2>QuizUp</h2>
       </Link>
       <div className="navbar-right">
-        <p onClick={loginHandler}>Sign In</p>
+        {currentUser ? (
+          <span className="toLogin" onClick={signOutUser}>
+            Sign Out
+          </span>
+        ) : (
+          <Link className="toLogin" to="/Login">
+            {" "}
+            <span>Sign in</span>
+          </Link>
+        )}
+
         <p>Dark Mode</p>
       </div>
     </div>
