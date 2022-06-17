@@ -1,18 +1,17 @@
 import Navbar from "../../Navigation/Navbar";
 import { useState } from "react";
-
-import "../../../Routes/Quiz.css";
 import { useNavigate } from "react-router-dom";
-import { useBasketBall } from "../../../Contexts/BasketBallContext";
-const BasketBallQuiz = () => {
+import { useJavascript } from "../../../Contexts/JavascriptContext";
+import "../../../Routes/Quiz.css";
+
+const JavascriptQuiz = () => {
   let navigate = useNavigate();
-  const { BasketBallData, setBasketBallData, score, setScore } =
-    useBasketBall();
+  const { JsData, setJavascriptData, score, setScore } = useJavascript();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
 
   const resultsHandler = () => {
-    navigate("/BasketBallQuizRes");
+    navigate("/JavascriptQuizRes");
   };
 
   const clickHandler = (ele, selectedAnswer) => {
@@ -24,14 +23,14 @@ const BasketBallQuiz = () => {
       setScore(newScore);
     }
 
-    const newCurrentBasketBallData = BasketBallData.map((item) =>
+    const newJavascriptData = JsData.map((item) =>
       item.id === ele.id
         ? { ...item, selectedAnswer: selectedAnswer, questionStatus: true }
         : item
     );
-    setBasketBallData(newCurrentBasketBallData);
+    setJavascriptData(newJavascriptData);
     const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < BasketBallData.length) {
+    if (nextQuestion < JsData.length) {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
@@ -40,8 +39,8 @@ const BasketBallQuiz = () => {
 
   return (
     <div className="quiz-container">
+      {" "}
       <Navbar />
-
       {showScore ? (
         <div className="results-section">
           <div>Your Score is {score}</div>
@@ -54,13 +53,13 @@ const BasketBallQuiz = () => {
             <p>
               Question:{" "}
               <span className="actual-score">{currentQuestion + 1}</span>/
-              {BasketBallData.length}
+              {JsData.length}
             </p>
             <p style={{ color: score < 0 ? "red" : "green" }}>Score: {score}</p>
           </div>
           <div className="question-container">
             <div className="question-text">
-              {currentQuestion + 1}. {BasketBallData[currentQuestion].question}
+              {currentQuestion + 1}. {JsData[currentQuestion].question}
             </div>
             <div>
               {
@@ -68,32 +67,32 @@ const BasketBallQuiz = () => {
                   <button
                     onClick={() =>
                       clickHandler(
-                        BasketBallData[currentQuestion],
-                        BasketBallData[currentQuestion].optionOne
+                        JsData[currentQuestion],
+                        JsData[currentQuestion].optionOne
                       )
                     }
                   >
-                    {BasketBallData[currentQuestion].optionOne}
+                    {JsData[currentQuestion].optionOne}
                   </button>
                   <button
                     onClick={() =>
                       clickHandler(
-                        BasketBallData[currentQuestion],
-                        BasketBallData[currentQuestion].optionTwo
+                        JsData[currentQuestion],
+                        JsData[currentQuestion].optionTwo
                       )
                     }
                   >
-                    {BasketBallData[currentQuestion].optionTwo}
+                    {JsData[currentQuestion].optionTwo}
                   </button>
                   <button
                     onClick={() =>
                       clickHandler(
-                        BasketBallData[currentQuestion],
-                        BasketBallData[currentQuestion].optionThree
+                        JsData[currentQuestion],
+                        JsData[currentQuestion].optionThree
                       )
                     }
                   >
-                    {BasketBallData[currentQuestion].optionThree}
+                    {JsData[currentQuestion].optionThree}
                   </button>
                 </div>
               }
@@ -105,4 +104,4 @@ const BasketBallQuiz = () => {
   );
 };
 
-export default BasketBallQuiz;
+export default JavascriptQuiz;

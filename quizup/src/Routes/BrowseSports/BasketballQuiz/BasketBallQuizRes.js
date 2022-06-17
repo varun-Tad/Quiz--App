@@ -1,17 +1,16 @@
 import Navbar from "../../Navigation/Navbar";
-
-import { useTennis } from "../../../Contexts/TennisContext";
+import { useBasketBall } from "../../../Contexts/BasketBallContext";
 import "../../../Routes/Results.css";
 
-const TennisQuizRes = () => {
-  const { TennisData, score } = useTennis();
+const BasketBallQuizRes = () => {
+  const { BasketBallData, score } = useBasketBall();
   return (
     <div>
       <Navbar />
       <div className="results-container">
         <h2 className="result-heading">Results</h2>
         <p className="final-score">Final Score : {score}/10</p>
-        {TennisData.map((ele) => {
+        {BasketBallData.map((ele) => {
           return (
             <div key={ele.id} className="question-options">
               {ele.selectedAnswer === ele.correctAnswer ? (
@@ -63,4 +62,4 @@ const TennisQuizRes = () => {
   );
 };
 
-export default TennisQuizRes;
+export default BasketBallQuizRes;

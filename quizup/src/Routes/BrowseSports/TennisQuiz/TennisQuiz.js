@@ -1,7 +1,7 @@
 import Navbar from "../../Navigation/Navbar";
 import { useState } from "react";
 import { useTennis } from "../../../Contexts/TennisContext";
-import "./TennisQuiz.css";
+import "../../../Routes/Quiz.css";
 import { useNavigate } from "react-router-dom";
 const TennisQuiz = () => {
   let navigate = useNavigate();
@@ -28,6 +28,7 @@ const TennisQuiz = () => {
         : item
     );
     setTennisData(newCurrentTennisData);
+
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < TennisData.length) {
       setCurrentQuestion(nextQuestion);
@@ -37,7 +38,7 @@ const TennisQuiz = () => {
   };
 
   return (
-    <div className="Tennis-quiz-container">
+    <div className="quiz-container">
       <Navbar />
 
       {showScore ? (

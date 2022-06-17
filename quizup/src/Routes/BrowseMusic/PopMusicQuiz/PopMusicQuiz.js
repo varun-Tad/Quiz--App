@@ -2,7 +2,7 @@ import Navbar from "../../Navigation/Navbar";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePopMusic } from "../../../Contexts/PopMusicContext";
-import "./PopMusicQuiz.css";
+import "../../../Routes/Quiz.css";
 
 const PopMusicQuiz = () => {
   let navigate = useNavigate();
@@ -11,7 +11,7 @@ const PopMusicQuiz = () => {
   const [showScore, setShowScore] = useState(false);
 
   const resultsHandler = () => {
-    navigate("/TennisQuizRes");
+    navigate("/PopMusicQuizRes");
   };
 
   const clickHandler = (ele, selectedAnswer) => {
@@ -38,13 +38,13 @@ const PopMusicQuiz = () => {
   };
 
   return (
-    <div className="PopMusic-quiz-container">
+    <div className="quiz-container">
       <Navbar />
 
       {showScore ? (
         <div className="results-section">
           <div>Your Score is {score}</div>
-          <div>Head over to results page</div>
+          <div>Head over to results page to find the correct answers</div>
           <button onClick={resultsHandler}>Results &#8594;</button>
         </div>
       ) : (

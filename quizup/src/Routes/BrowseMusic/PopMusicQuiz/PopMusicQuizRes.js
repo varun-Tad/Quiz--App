@@ -1,17 +1,17 @@
+import { usePopMusic } from "../../../Contexts/PopMusicContext";
 import Navbar from "../../Navigation/Navbar";
 
-import { useTennis } from "../../../Contexts/TennisContext";
 import "../../../Routes/Results.css";
 
-const TennisQuizRes = () => {
-  const { TennisData, score } = useTennis();
+const PopMusicQuizRes = () => {
+  const { PopMusicData, score } = usePopMusic();
   return (
     <div>
       <Navbar />
       <div className="results-container">
         <h2 className="result-heading">Results</h2>
         <p className="final-score">Final Score : {score}/10</p>
-        {TennisData.map((ele) => {
+        {PopMusicData.map((ele) => {
           return (
             <div key={ele.id} className="question-options">
               {ele.selectedAnswer === ele.correctAnswer ? (
@@ -59,8 +59,9 @@ const TennisQuizRes = () => {
           );
         })}
       </div>
+      <button>Back to menu page</button>
     </div>
   );
 };
 
-export default TennisQuizRes;
+export default PopMusicQuizRes;

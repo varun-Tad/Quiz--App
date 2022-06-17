@@ -11,6 +11,10 @@ const BrowseMusic = () => {
     navigate("/PopMusicQuiz");
   };
 
+  const BolMusicNavHandler = () => {
+    navigate("/BolMusicQuiz");
+  };
+
   return (
     <div>
       <Navbar />
@@ -24,7 +28,9 @@ const BrowseMusic = () => {
               Let's see how good you are with Bollywood Music. Hop in and take
               the quiz now !
             </h3>
-            <button className="play-btn">Play →</button>
+            <button className="play-btn" onClick={BolMusicNavHandler}>
+              Play →
+            </button>
           </div>
         </div>
         <div className="musicTwo-quiz">
