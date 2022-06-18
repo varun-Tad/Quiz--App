@@ -6,6 +6,8 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 import "./SignUp.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const defaultFormFields = {
   displayName: "",
@@ -33,7 +35,9 @@ const SignUp = () => {
     event.preventDefault();
 
     if (password !== confirmPassword) {
-      alert("Passwords do not match");
+      toast.error("Passwords do not match", {
+        autoClose: 3000,
+      });
       return;
     }
 
@@ -47,9 +51,13 @@ const SignUp = () => {
       resetFormFields();
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
-        alert("Cannot create user.Email alerady in use");
+        toast.error("Cannot create user.Email alerady in use", {
+          autoClose: 3000,
+        });
       } else {
-        console.log("user creation has encountered an error", error);
+        toast.error("user creation has encountered an error", {
+          autoClose: 3000,
+        });
       }
     }
   };
@@ -118,6 +126,7 @@ const SignUp = () => {
           </div>
         </form>
       </section>
+      <ToastContainer />
     </div>
   );
 };

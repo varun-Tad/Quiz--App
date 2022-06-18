@@ -2,9 +2,14 @@ import { useBolMusic } from "../../../Contexts/BolMusicContext";
 import Navbar from "../../Navigation/Navbar";
 
 import "../../../Routes/Results.css";
+import { useNavigate } from "react-router-dom";
 
 const BolMusicQuizRes = () => {
   const { BolMusicData, score } = useBolMusic();
+  let navigate = useNavigate();
+  const goToMenuHandler = () => {
+    navigate("/Browse");
+  };
   return (
     <div>
       <Navbar />
@@ -59,7 +64,9 @@ const BolMusicQuizRes = () => {
           );
         })}
       </div>
-      <button>Back to menu page</button>
+      <button className="goBack-btn" onClick={goToMenuHandler}>
+        Back to menu page
+      </button>
     </div>
   );
 };

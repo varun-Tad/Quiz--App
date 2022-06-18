@@ -2,9 +2,14 @@ import Navbar from "../../Navigation/Navbar";
 
 import { useTennis } from "../../../Contexts/TennisContext";
 import "../../../Routes/Results.css";
+import { useNavigate } from "react-router-dom";
 
 const TennisQuizRes = () => {
   const { TennisData, score } = useTennis();
+  let navigate = useNavigate();
+  const goToMenuHandler = () => {
+    navigate("/Browse");
+  };
   return (
     <div>
       <Navbar />
@@ -59,6 +64,9 @@ const TennisQuizRes = () => {
           );
         })}
       </div>
+      <button className="goBack-btn" onClick={goToMenuHandler}>
+        Back to menu page
+      </button>
     </div>
   );
 };

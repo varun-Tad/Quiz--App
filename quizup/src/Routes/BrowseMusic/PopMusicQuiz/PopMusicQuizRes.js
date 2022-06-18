@@ -2,9 +2,14 @@ import { usePopMusic } from "../../../Contexts/PopMusicContext";
 import Navbar from "../../Navigation/Navbar";
 
 import "../../../Routes/Results.css";
+import { useNavigate } from "react-router-dom";
 
 const PopMusicQuizRes = () => {
   const { PopMusicData, score } = usePopMusic();
+  let navigate = useNavigate();
+  const goToMenuHandler = () => {
+    navigate("/Browse");
+  };
   return (
     <div>
       <Navbar />
@@ -59,7 +64,9 @@ const PopMusicQuizRes = () => {
           );
         })}
       </div>
-      <button>Back to menu page</button>
+      <button className="goBack-btn" onClick={goToMenuHandler}>
+        Back to menu page
+      </button>
     </div>
   );
 };

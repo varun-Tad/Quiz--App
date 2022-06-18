@@ -2,9 +2,9 @@
 
 .navbar-container {
   display: flex;
-  background-color: #6200ee;
   padding: 0.2rem 2rem 0 1rem;
   justify-content: space-between;
+  background-color: #6200ee;
   height: 8rem;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -52,4 +52,15 @@
 
 .user {
   margin-top: 20px;
+}
+
+.colorMode-btn {
+  height: 4rem;
+
+  color: white;
+  padding: 0 1rem;
+}
+
+.colorMode-btn:hover {
+  text-decoration: underline;
 }

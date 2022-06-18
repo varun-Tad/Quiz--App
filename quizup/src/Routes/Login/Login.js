@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Navigation/Navbar";
 import "./Login.css";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const defaultFormFields = {
   email: "",
@@ -41,13 +43,19 @@ const Login = () => {
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":
-          alert("incorrect password for email");
+          toast.error("incorrect password for email", {
+            autoClose: 3000,
+          });
           break;
         case "auth/user-not-found":
-          alert("no user associated with this email");
+          toast.error("no user associated with this email", {
+            autoClose: 3000,
+          });
           break;
         default:
-          console.log(error);
+          toast.error(error, {
+            autoClose: 3000,
+          });
       }
     }
   };
@@ -107,6 +115,7 @@ const Login = () => {
           </div>
         </form>
       </section>
+      <ToastContainer />
     </div>
   );
 };

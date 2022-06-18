@@ -1,9 +1,14 @@
 import Navbar from "../../Navigation/Navbar";
 import { useJavascript } from "../../../Contexts/JavascriptContext";
 import "../../../Routes/Results.css";
+import { useNavigate } from "react-router-dom";
 
 const JavascriptQuizRes = () => {
   const { JsData, score } = useJavascript();
+  let navigate = useNavigate();
+  const goToMenuHandler = () => {
+    navigate("/Browse");
+  };
   return (
     <div>
       <Navbar />
@@ -58,7 +63,9 @@ const JavascriptQuizRes = () => {
           );
         })}
       </div>
-      <button>Back to menu page</button>
+      <button className="goBack-btn" onClick={goToMenuHandler}>
+        Back to menu page
+      </button>
     </div>
   );
 };

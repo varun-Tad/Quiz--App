@@ -25,8 +25,7 @@
   font-size: 3em;
 }
 
-.hero-text-container button {
-  background-color: #3700b3;
+.btn-text {
   color: white;
   padding: 1rem;
   font-size: 20px;
@@ -35,10 +34,11 @@
   cursor: pointer;
   font-weight: 900;
   box-shadow: 0 9px #999;
+  background-color: #6200ee;
 }
 
-.hero-text-container button:active {
-  background-color: #6200ee;
+.btn-text:active {
+  background-color: #3700b3;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -54,7 +54,7 @@
   padding-top: 2rem;
 }
 
-.main-section h1 {
+.main-section-h1 {
   text-align: center;
   font-size: 3em;
 }
@@ -113,22 +113,22 @@
 .rules-heading {
   text-align: center;
   margin-top: 2rem;
-  margin-right: 7rem;
   font-size: 3rem;
   font-family: "Berkshire Swash", cursive;
 }
+
 .rules-section {
   position: relative;
   width: 35%;
   padding: 2rem;
-  color: #6200ee;
   left: 30%;
-  background-color: white;
   opacity: 0.9;
   border-radius: 0.5rem;
   font-weight: 700;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   margin-bottom: 5rem;
+  color: #6200ee;
+  background-color: white;
 }
 
 .rule {
@@ -142,7 +142,7 @@
   text-align: center;
 }
 
-.playBtn-quiz button {
+.rules-section-btn {
   padding: 0.5rem 1rem;
   color: white;
   background-color: #6200ee;
@@ -154,7 +154,7 @@
   border: none;
 }
 
-.playBtn-quiz button:active {
+.rules-section-btn:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }

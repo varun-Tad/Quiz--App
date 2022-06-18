@@ -75,3 +75,16 @@
 .green-points {
   color: green;
 }
+
+.goBack-btn {
+  cursor: pointer;
+  width: 20%;
+  margin: 2rem 2rem 5rem 35rem;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  background-color: #6200ee;
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  border: none;
+}

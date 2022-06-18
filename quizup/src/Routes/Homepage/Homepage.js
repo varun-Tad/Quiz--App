@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import Navbar from "../Navigation/Navbar";
 import { ImBullhorn } from "react-icons/im";
 import { AiOutlineToTop } from "react-icons/ai";
@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 
 import { Link, useNavigate } from "react-router-dom";
 import "./Homepage.css";
+import { UserContext } from "../../Contexts/user.context";
 
 const Homepage = () => {
   useEffect(() => {
@@ -17,11 +18,17 @@ const Homepage = () => {
     AOS.refresh();
   }, []);
 
+  const { currentUser } = useContext(UserContext);
+
   let navigate = useNavigate();
   const rulesRef = useRef(null);
   const topRef = useRef(null);
   const exploreBtnHandler = () => {
-    navigate("/Browse");
+    if (currentUser) {
+      navigate("/Browse");
+    } else {
+      navigate("/Login");
+    }
   };
 
   const rulesHandler = () => {
@@ -32,7 +39,6 @@ const Homepage = () => {
     topRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  //Need to work on scroll for rules
   return (
     <div className="homePage" ref={topRef}>
       <Navbar />
@@ -40,8 +46,12 @@ const Homepage = () => {
         <div className="hero-text-container">
           <h1 className="hero-text">Go ahead! Take the quiz!</h1>
           <div className="hero-btns">
-            <button onClick={exploreBtnHandler}>Explore</button>
-            <button onClick={rulesHandler}>Rules</button>
+            <button className="btn-text" onClick={exploreBtnHandler}>
+              Explore
+            </button>
+            <button className="btn-text" onClick={rulesHandler}>
+              Rules
+            </button>
           </div>
         </div>
         <div className="hero-image">
@@ -50,7 +60,7 @@ const Homepage = () => {
       </section>
       <main className="main-section">
         <div data-aos="fade-right" data-aos-duration="1500">
-          <h1>Some popular Quizes !</h1>
+          <h1 className="main-section-h1">Some popular Quizes !</h1>
         </div>
 
         <div className="popular-section">
@@ -91,13 +101,9 @@ const Homepage = () => {
           data-aos-duration="1500"
           className="rules-heading"
         >
-          <h1>Rules</h1>
+          <h1 className="rules-heading">Rules</h1>
         </div>
-        <div
-          data-aos="fade-left"
-          data-aos-duration="1500"
-          className="rules-section"
-        >
+        <div className="rules-section">
           <div className="rule">
             <ImBullhorn />
             <p>Total Number of questions: 5</p>
@@ -121,7 +127,9 @@ const Homepage = () => {
             <p>Get all questions right and you earn double the points ! </p>
           </div>
           <div className="playBtn-quiz">
-            <button onClick={exploreBtnHandler}>Jump in !</button>
+            <button className="rules-section-btn " onClick={exploreBtnHandler}>
+              Jump in !
+            </button>
           </div>
         </div>
       </section>
