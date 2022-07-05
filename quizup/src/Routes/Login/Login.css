@@ -1,0 +1,85 @@
+.hero-section {
+  margin-top: 12rem;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid black;
+  width: 28%;
+  padding: 2.8rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.login-header h2 {
+  color: #6200ee;
+  text-decoration: underline;
+}
+
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+  margin-left: 1.5rem;
+}
+
+.login-inputs input {
+  padding: 0.5rem;
+  background-color: rgba(98, 0, 238, 0.25);
+  border-radius: 1rem;
+  outline: none;
+}
+
+.sign-in-btn {
+  text-align: center;
+}
+
+.sign-in-btn button {
+  width: 45%;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #6200ee;
+  color: white;
+}
+
+.sign-in-btn button:active {
+  background-color: #3700b3;
+}
+
+.small-text {
+  font-size: 1rem;
+  color: gray;
+}
+
+.google-sign-in-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+  cursor: pointer;
+  border: 2px solid black;
+  padding: 1rem 0.8rem;
+  width: 70%;
+  border-radius: 1rem;
+  border: 1px solid;
+  margin-left: 3rem;
+}
+
+.sign-up-small {
+  color: #6200ee;
+  cursor: pointer;
+}
+
+.sign-up-small:hover {
+  text-decoration: underline;
+}

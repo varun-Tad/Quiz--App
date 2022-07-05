@@ -1,0 +1,55 @@
+const ReactQuizData = [
+  {
+    id: 1,
+    question: "Which of the following command is used to create react-js-app ?",
+    optionOne: "npx create-react-app appname",
+    optionTwo: "install - l create-react-app",
+    optionThree: "npm install create-react-app",
+    correctAnswer: "npx create-react-app appname",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 2,
+    question: "What is the default port number in which the application run ?",
+    optionOne: "3000",
+    optionTwo: "8080",
+    optionThree: "5000",
+    correctAnswer: "3000",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 3,
+    question: "Which of the following is a way to handle data in React.js ?",
+    optionOne: "State & Props",
+    optionTwo: "State & Services",
+    optionThree: "State & Component",
+    correctAnswer: "State & Props",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 4,
+    question:
+      "Which of the following function is used to change the state of the React.js component?",
+    optionOne: "this.setState",
+    optionTwo: "this.State{}",
+    optionThree: "this.setChangeState",
+    correctAnswer: "this.setState",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+  {
+    id: 5,
+    question: "What is true for the keys given to a list of elements in React?",
+    optionOne: "Unique in the DOM.",
+    optionTwo: "Unique among the siblings only.",
+    optionThree: "Do not require to be unique.",
+    correctAnswer: "Unique among the siblings only.",
+    selectedAnswer: " ",
+    questionStatus: false,
+  },
+];
+
+export default ReactQuizData;

@@ -14,11 +14,12 @@ const BrowsePage = () => {
     AOS.init();
     AOS.refresh();
   }, []);
+
   return (
     <div className="BrowsePage">
       <Navbar />
 
-      <main className="explore-section">
+      <main>
         <h1 className="explore-heading">Explore</h1>
         <div className="explore-options-section">
           <div

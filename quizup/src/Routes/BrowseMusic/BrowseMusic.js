@@ -1,9 +1,20 @@
 import Navbar from "../Navigation/Navbar";
 import img7 from "../../assets/MusicOne.svg";
 import img8 from "../../assets/MusicTwo.svg";
+
 import "./BrowseMusic.css";
+import { useNavigate } from "react-router-dom";
 
 const BrowseMusic = () => {
+  let navigate = useNavigate();
+  const PopMusicNavHandler = () => {
+    navigate("/PopMusicQuiz");
+  };
+
+  const BolMusicNavHandler = () => {
+    navigate("/BolMusicQuiz");
+  };
+
   return (
     <div>
       <Navbar />
@@ -17,7 +28,9 @@ const BrowseMusic = () => {
               Let's see how good you are with Bollywood Music. Hop in and take
               the quiz now !
             </h3>
-            <button className="play-btn">Play</button>
+            <button className="play-btn" onClick={BolMusicNavHandler}>
+              Play →
+            </button>
           </div>
         </div>
         <div className="musicTwo-quiz">
@@ -26,10 +39,12 @@ const BrowseMusic = () => {
           </div>
           <div className="text-bottom">
             <h3>
-              Let's see how good you are with some English Music.Hop in and take
-              the quiz now !
+              Let's see how good you are with some English Pop Music.Hop in and
+              take the quiz now !
             </h3>
-            <button className="play-btn">Play</button>
+            <button className="play-btn" onClick={PopMusicNavHandler}>
+              Play →
+            </button>
           </div>
         </div>
       </section>

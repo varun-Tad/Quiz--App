@@ -4,12 +4,33 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
+import { TennisProvider } from "./Contexts/TennisContext";
+import { BasketBallProvider } from "./Contexts/BasketBallContext";
+import { PopMusicProvider } from "./Contexts/PopMusicContext";
+import { UserProvider } from "./Contexts/user.context";
+import { BolMusicProvider } from "./Contexts/BolMusicContext";
+import { JavascriptProvider } from "./Contexts/JavascriptContext";
+import { ReactProvider } from "./Contexts/ReactContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <UserProvider>
+        <ReactProvider>
+          <JavascriptProvider>
+            <BolMusicProvider>
+              <PopMusicProvider>
+                <BasketBallProvider>
+                  <TennisProvider>
+                    <App />
+                  </TennisProvider>
+                </BasketBallProvider>
+              </PopMusicProvider>
+            </BolMusicProvider>
+          </JavascriptProvider>
+        </ReactProvider>
+      </UserProvider>
     </Router>
   </React.StrictMode>
 );
