@@ -19,6 +19,17 @@ const TennisProvider = ({ children }) => {
     }
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("score", JSON.stringify(score));
+  }, [score]);
+
+  useEffect(() => {
+    const score = JSON.parse(localStorage.getItem("score"));
+    if (score) {
+      setScore(score);
+    }
+  }, []);
+
   return (
     <TennisContext.Provider
       value={{ TennisData, setTennisData, score, setScore }}
