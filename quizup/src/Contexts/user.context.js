@@ -21,7 +21,7 @@ export const UserProvider = ({ children }) => {
       if (user) {
         createUserDocumentFromAuth(user);
         setCurrentUser(user);
-        navigate("/");
+        // navigate(-1);
       } else {
         setCurrentUser(user);
         navigate("/");

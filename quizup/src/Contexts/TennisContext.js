@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import TennisQuizData from "../Routes/BrowseSports/TennisQuiz/TennisQuiz.data";
 
 const TennisContext = createContext();
@@ -7,6 +7,17 @@ const TennisProvider = ({ children }) => {
   const [TennisData, setTennisData] = useState(TennisQuizData);
 
   const [score, setScore] = useState(0);
+
+  useEffect(() => {
+    localStorage.setItem("TennisData", JSON.stringify(TennisData));
+  }, [TennisData]);
+
+  useEffect(() => {
+    const TennisData = JSON.parse(localStorage.getItem("TennisData"));
+    if (TennisData) {
+      setTennisData(TennisData);
+    }
+  }, []);
 
   return (
     <TennisContext.Provider
