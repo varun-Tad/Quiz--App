@@ -1,5 +1,5 @@
 import Navbar from "../../Navigation/Navbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTennis } from "../../../Contexts/TennisContext";
 import "../../../Routes/Quiz.css";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,15 @@ const TennisQuiz = () => {
   const { TennisData, setTennisData, score, setScore } = useTennis();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("cuQue", currentQuestion);
+  });
+
+  useEffect(() => {
+    const cq = localStorage.getItem("cuQue");
+    if (cq) setScore(+cq);
+  });
 
   const resultsHandler = () => {
     navigate("/TennisQuizRes");
