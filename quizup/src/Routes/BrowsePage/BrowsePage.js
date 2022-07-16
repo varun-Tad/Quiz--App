@@ -18,7 +18,6 @@ const BrowsePage = () => {
   return (
     <div className="BrowsePage">
       <Navbar />
-
       <main>
         <h1 className="explore-heading">Explore</h1>
         <div className="explore-options-section">

@@ -5,7 +5,6 @@ const BolMusicContext = createContext();
 
 const BolMusicProvider = ({ children }) => {
   const [BolMusicData, setBolMusicData] = useState(BolMusicQuizData);
-
   const [score, setScore] = useState(0);
 
   return (

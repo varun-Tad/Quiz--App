@@ -1,6 +1,5 @@
 import Navbar from "../../Navigation/Navbar";
 import { useState } from "react";
-
 import "../../../Routes/Quiz.css";
 import { useNavigate } from "react-router-dom";
 import { useBasketBall } from "../../../Contexts/BasketBallContext";
@@ -41,7 +40,6 @@ const BasketBallQuiz = () => {
   return (
     <div className="quiz-container">
       <Navbar />
-
       {showScore ? (
         <div className="results-section">
           <div>Your Score is {score}</div>

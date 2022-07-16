@@ -1,6 +1,5 @@
 import {
   signInWithGooglePopup,
-  createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 import { useNavigate } from "react-router-dom";
@@ -67,7 +66,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <>
       <Navbar />
       <section className="hero-section">
         <form className="login-container" onSubmit={handleSubmit}>
@@ -116,7 +115,7 @@ const Login = () => {
         </form>
       </section>
       <ToastContainer />
-    </div>
+    </>
   );
 };
 

@@ -5,7 +5,6 @@ const JavascriptContext = createContext();
 
 const JavascriptProvider = ({ children }) => {
   const [JsData, setJavascriptData] = useState(JavascriptQuizData);
-
   const [score, setScore] = useState(0);
 
   return (

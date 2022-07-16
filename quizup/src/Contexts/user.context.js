@@ -12,7 +12,6 @@ export const UserContext = createContext({
 
 export const UserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
-
   const value = { currentUser, setCurrentUser };
   const navigate = useNavigate();
 
@@ -21,7 +20,7 @@ export const UserProvider = ({ children }) => {
       if (user) {
         createUserDocumentFromAuth(user);
         setCurrentUser(user);
-        navigate("/");
+        navigate(-1);
       } else {
         setCurrentUser(user);
         navigate("/");

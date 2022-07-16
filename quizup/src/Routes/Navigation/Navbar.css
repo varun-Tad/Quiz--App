@@ -4,9 +4,9 @@
   display: flex;
   padding: 0.2rem 2rem 0 1rem;
   justify-content: space-between;
-  background-color: #6200ee;
+  background-color: var(--color-blueMagenta);
   height: 8rem;
-  color: white;
+  color: var(--color-white);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -17,7 +17,7 @@
 }
 
 .logo-container h2 {
-  color: white;
+  color: var(--color-white);
   font-family: "Berkshire Swash", cursive;
   font-size: 3rem;
 }
@@ -39,11 +39,17 @@
   cursor: pointer;
 }
 
-.toLogin {
+.signInOut-btn {
   cursor: pointer;
   text-decoration: none;
-  color: white;
-  margin-top: 1.3rem;
+  width: 7rem;
+  height: 3rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+  color: var(--color-blueMagenta);
+  font-weight: 800;
+  font-size: 1rem;
 }
 
 .toLogin:hover span {
@@ -56,8 +62,7 @@
 
 .colorMode-btn {
   height: 4rem;
-
-  color: white;
+  color: var(--color-white);
   padding: 0 1rem;
 }
 

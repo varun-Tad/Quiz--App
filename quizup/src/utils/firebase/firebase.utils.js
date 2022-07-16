@@ -10,6 +10,7 @@ import {
 } from "firebase/auth";
 
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBWMc_-uAoQ0w4c0EW9_7dE-LLSmg0hVXU",
@@ -42,8 +43,6 @@ export const createUserDocumentFromAuth = async (
   if (!userAuth) return;
   const userDocref = doc(db, "users", userAuth.uid);
 
-  console.log(userDocref);
-
   const userSnapshot = await getDoc(userDocref);
 
   if (!userSnapshot.exists()) {
@@ -58,7 +57,9 @@ export const createUserDocumentFromAuth = async (
         ...additionalInformation,
       });
     } catch (error) {
-      console.log("Error creating the user", error.message);
+      toast.error("Error creating user", {
+        autoClose: 3000,
+      });
     }
   }
   return userDocref;
