@@ -21,7 +21,7 @@
   padding: 2rem;
   width: 50%;
   min-width: 500px;
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 0.5rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
@@ -46,8 +46,8 @@
   margin: 0 auto;
   padding: 0.5rem 0;
   border-radius: 0.5rem;
-  background-color: #6200ee;
-  color: white;
+  background-color: var(--color-blueMagenta);
+  color: var(--color-white);
   font-weight: 800;
   font-size: 1rem;
   border: none;
@@ -69,11 +69,11 @@
 }
 
 .red-points {
-  color: red;
+  color: var(--color-red);
 }
 
 .green-points {
-  color: green;
+  color: var(--color-green);
 }
 
 .goBack-btn {
@@ -82,8 +82,8 @@
   margin: 2rem 2rem 5rem 35rem;
   padding: 0.5rem 0;
   border-radius: 0.5rem;
-  background-color: #6200ee;
-  color: white;
+  background-color: var(--color-blueMagenta);
+  color: var(--color-white);
   font-weight: 800;
   font-size: 1rem;
   border: none;

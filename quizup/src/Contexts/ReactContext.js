@@ -5,7 +5,6 @@ const ReactContext = createContext();
 
 const ReactProvider = ({ children }) => {
   const [ReactData, setReactData] = useState(ReactQuizData);
-
   const [score, setScore] = useState(0);
 
   return (

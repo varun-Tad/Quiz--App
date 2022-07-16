@@ -5,7 +5,6 @@ const TennisContext = createContext();
 
 const TennisProvider = ({ children }) => {
   const [TennisData, setTennisData] = useState(TennisQuizData);
-
   const [score, setScore] = useState(0);
 
   useEffect(() => {

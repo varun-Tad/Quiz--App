@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-
-import "./App.css";
+import { ToastsContainer, ToastsStore } from "react-toasts";
 import BrowseCoding from "./Routes/BrowseCoding/BrowseCoding";
 import JavascriptQuiz from "./Routes/BrowseCoding/JavascriptQuiz/JavascriptQuiz";
 import JavascriptQuizRes from "./Routes/BrowseCoding/JavascriptQuiz/JavascriptQuizRes";
@@ -16,11 +15,11 @@ import BasketBallQuiz from "./Routes/BrowseSports/BasketballQuiz/BasketBallQuiz"
 import BasketBallQuizRes from "./Routes/BrowseSports/BasketballQuiz/BasketBallQuizRes";
 import BrowseSports from "./Routes/BrowseSports/BrowseSports";
 import TennisQuiz from "./Routes/BrowseSports/TennisQuiz/TennisQuiz";
-
 import TennisQuizRes from "./Routes/BrowseSports/TennisQuiz/TennisQuizRes";
 import Homepage from "./Routes/Homepage/Homepage";
 import Login from "./Routes/Login/Login";
 import SignUp from "./Routes/SignUp/SignUp";
+import "./App.css";
 
 function App() {
   return (
@@ -46,6 +45,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
       </Routes>
+      <ToastsContainer store={ToastsStore} />
     </div>
   );
 }

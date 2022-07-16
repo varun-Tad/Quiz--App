@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../Contexts/user.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import { ToastContainer, toast } from "react-toastify";
@@ -9,12 +9,17 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const { currentUser } = useContext(UserContext);
+  let navigate = useNavigate();
 
   const signOutHandler = async () => {
     await signOutUser();
     toast.success("Logout successful", {
       autoClose: 3000,
     });
+  };
+
+  const signInHandler = () => {
+    navigate("/Login");
   };
 
   return (
@@ -25,14 +30,13 @@ const Navbar = () => {
         </Link>
         <div className="navbar-right">
           {currentUser ? (
-            <span className="toLogin" onClick={signOutHandler}>
+            <button className="signInOut-btn" onClick={signOutHandler}>
               Sign Out
-            </span>
+            </button>
           ) : (
-            <Link className="toLogin" to="/Login">
-              {" "}
-              <span>Sign in</span>
-            </Link>
+            <button className="signInOut-btn" onClick={signInHandler}>
+              Sign in
+            </button>
           )}
         </div>
       </div>
