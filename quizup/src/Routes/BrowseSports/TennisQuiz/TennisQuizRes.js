@@ -11,7 +11,7 @@ const TennisQuizRes = () => {
     navigate("/Browse");
   };
   return (
-    <div>
+    <>
       <Navbar />
       <div className="results-container">
         <h2 className="result-heading">Results</h2>
@@ -67,7 +67,7 @@ const TennisQuizRes = () => {
       <button className="goBack-btn" onClick={goToMenuHandler}>
         Back to menu page
       </button>
-    </div>
+    </>
   );
 };
 

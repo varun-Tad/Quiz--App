@@ -16,7 +16,7 @@ const BrowseSports = () => {
   };
 
   return (
-    <div>
+    <>
       <Navbar />
       <section className="BrowseSport-section">
         <div className="sportOne-quiz">
@@ -45,7 +45,7 @@ const BrowseSports = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

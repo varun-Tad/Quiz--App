@@ -67,7 +67,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <>
       <Navbar />
       <section className="hero-section">
         <form className="login-container" onSubmit={handleSubmit}>
@@ -116,7 +116,7 @@ const Login = () => {
         </form>
       </section>
       <ToastContainer />
-    </div>
+    </>
   );
 };
 
