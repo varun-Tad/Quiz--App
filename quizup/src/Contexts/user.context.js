@@ -4,6 +4,8 @@ import {
   onAuthStateChangedListener,
   createUserDocumentFromAuth,
 } from "../utils/firebase/firebase.utils";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const UserContext = createContext({
   currentUser: null,
@@ -21,6 +23,9 @@ export const UserProvider = ({ children }) => {
         createUserDocumentFromAuth(user);
         setCurrentUser(user);
         navigate(-1);
+        toast.success("Login successful", {
+          autoClose: 3000,
+        });
       } else {
         setCurrentUser(user);
         navigate("/");
