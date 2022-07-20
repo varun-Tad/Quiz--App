@@ -4,7 +4,7 @@ This is a fully functional quiz App build using react Js and firebase containing
 
 
 
-Hosted Link:
+Hosted Link: [QuizUp](https://preeminent-selkie-446a65.netlify.app/)
 
 ## Features
 
@@ -14,8 +14,8 @@ Hosted Link:
 - Result Page with Answers & Score
 - Authentication
    - Sign-up
-   -Login
-   Logout
+   - Login
+   - Logout
    
    
 ### Home page
