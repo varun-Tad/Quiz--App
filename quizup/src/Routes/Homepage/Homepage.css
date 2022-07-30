@@ -166,3 +166,25 @@
   bottom: 50px;
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .hero-section {
+    display: block;
+
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-top: 3rem;
+    padding-left: 10rem;
+  }
+
+  .hero-btns {
+    padding-left: 16rem;
+  }
+
+  .popular-section {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}

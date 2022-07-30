@@ -35,3 +35,16 @@
   border-radius: 0.5rem;
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .BrowseSport-section {
+    display: block;
+    padding-left: 12rem;
+  }
+
+  .sportOne-quiz,
+  .sportTwo-quiz {
+    width: 50%;
+    margin-top: 5rem;
+  }
+}

@@ -88,3 +88,15 @@
   font-size: 1rem;
   border: none;
 }
+
+@media (max-width: 800px) {
+  .question-options {
+    margin-left: 5rem;
+  }
+  .points {
+    margin-left: 30rem;
+  }
+  .goBack-btn {
+    margin: 0 0 4rem 18rem;
+  }
+}

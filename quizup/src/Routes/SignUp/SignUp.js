@@ -71,7 +71,7 @@ const SignUp = () => {
   return (
     <div>
       <Navbar />
-      <section className="hero-section">
+      <section className="hero-section signUp-hero">
         <form className="signUp-container" onSubmit={handleSubmit}>
           <div className="signUp-header">
             <h2>Sign Up</h2>

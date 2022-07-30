@@ -1,5 +1,5 @@
 import Navbar from "../../Navigation/Navbar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTennis } from "../../../Contexts/TennisContext";
 import "../../../Routes/Quiz.css";
 import { useNavigate } from "react-router-dom";
@@ -8,15 +8,6 @@ const TennisQuiz = () => {
   const { TennisData, setTennisData, score, setScore } = useTennis();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
-
-  useEffect(() => {
-    localStorage.setItem("cuQue", currentQuestion);
-  });
-
-  useEffect(() => {
-    const cq = localStorage.getItem("cuQue");
-    if (cq) setScore(+cq);
-  });
 
   const resultsHandler = () => {
     navigate("/TennisQuizRes");
@@ -59,12 +50,11 @@ const TennisQuiz = () => {
       ) : (
         <>
           <div className="score-question">
-            <p>
+            <p class="question-number">
               Question:{" "}
               <span className="actual-score">{currentQuestion + 1}</span>/
               {TennisData.length}
             </p>
-            <p style={{ color: score < 0 ? "red" : "green" }}>Score: {score}</p>
           </div>
           <div className="question-container">
             <div className="question-text">

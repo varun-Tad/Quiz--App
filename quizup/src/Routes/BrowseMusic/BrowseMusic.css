@@ -36,3 +36,16 @@
   border-radius: 0.5rem;
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .BrowseMusic-section {
+    display: block;
+    padding-left: 12rem;
+  }
+
+  .musicOne-quiz,
+  .musicTwo-quiz {
+    width: 50%;
+    margin-top: 5rem;
+  }
+}

@@ -68,7 +68,7 @@ const Login = () => {
   return (
     <>
       <Navbar />
-      <section className="hero-section">
+      <section className="hero-section login-hero">
         <form className="login-container" onSubmit={handleSubmit}>
           <div className="login-header">
             <h2>Login</h2>

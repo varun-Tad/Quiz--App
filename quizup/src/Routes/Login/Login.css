@@ -83,3 +83,9 @@
 .sign-up-small:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 800px) {
+  .login-hero {
+    padding-left: 10rem;
+  }
+}

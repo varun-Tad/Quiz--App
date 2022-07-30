@@ -50,12 +50,11 @@ const PopMusicQuiz = () => {
       ) : (
         <>
           <div className="score-question">
-            <p>
+            <p class="question-number">
               Question:{" "}
               <span className="actual-score">{currentQuestion + 1}</span>/
               {PopMusicData.length}
             </p>
-            <p style={{ color: score < 0 ? "red" : "green" }}>Score: {score}</p>
           </div>
           <div className="question-container">
             <div className="question-text">
