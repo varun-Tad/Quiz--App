@@ -4,7 +4,7 @@ This is a fully functional quiz App build using react Js and firebase containing
 
 
 
-Hosted Link: [QuizUp](https://preeminent-selkie-446a65.netlify.app/)
+Hosted Link: [QuizUp](https://quizappppp.netlify.app/)
 
 ## Features
 
